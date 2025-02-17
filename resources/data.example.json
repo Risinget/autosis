@@ -1,0 +1,28 @@
+{
+    "GEMINI_API_KEY": "api_key_de_gemini",
+    "COD_SIS": "codigo_sis",
+    "PASS": "password_sis",
+    "DIA": "00",
+    "MES": "00",
+    "ANIO": "0000",
+    "useAI": false,
+    "CODIGOS": {
+        "1": "XXXXX",
+        "2": "XXXXX",
+        "3": "XXXXX",
+        "4": "XXXXX",
+        "5": "XXXXX"
+    },
+    "MATERIAS": [
+        {
+            "materia": "2008060",
+            "docente": "JUCHANI",
+            "grupo": "2"
+        },
+        {
+            "materia": "2008060",
+            "docente": "JUCHANI",
+            "grupo": "2"
+        }
+    ]
+}

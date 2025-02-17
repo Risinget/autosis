@@ -1,0 +1,19 @@
+{
+  "name": "autosis",
+  "version": "1.0.0",
+  "description": "automated registration of subjects for websis.umss.edu.bo by risinget",
+  "main": "./out/main/index.js",
+  "author": "https://github.com/risinget",
+  "homepage": "automated registration of subjects for websis.umss.edu.bo by risinget",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@gutenye/ocr-node": "^1.4.8",
+    "@tailwindcss/vite": "^4.0.4",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.50.1"
+  }
+}
