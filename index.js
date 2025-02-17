@@ -90,17 +90,22 @@ async function tryEnter(page, codigos, reintentos = 99) {
   await page.reload()
   let code1, code2
   try {
-    code1 = await page.evaluate(() => {
-      return document.querySelector(
-        '#idFrmLogin > table > tbody > tr:nth-child(1) > td:nth-child(1) > span'
-      ).textContent
-    })
+    code1 = await page.evaluate(`
+      (() => {
+        return document.querySelector(
+          '#idFrmLogin > table > tbody > tr:nth-child(1) > td:nth-child(1) > span'
+        ).textContent;
+      })()
+    `);
 
-    code2 = await page.evaluate(() => {
-      return document.querySelector(
-        '#idFrmLogin > table > tbody > tr:nth-child(2) > td:nth-child(1) > span'
-      ).textContent
-    })
+    code2 = await page.evaluate(`
+    (() => {
+        return document.querySelector(
+          '#idFrmLogin > table > tbody > tr:nth-child(2) > td:nth-child(1) > span'
+        ).textContent;
+      })()
+    `);
+
   } catch (error) {
     if (reintentos > 0) {
       return await tryEnter(page, codigos, reintentos - 1)
@@ -208,10 +213,13 @@ async function procesarMateria(materiaDocente) {
     }
 
     await page.waitForSelector('img')
-    const imageUrl = await page.evaluate(() => {
-      const img = document.querySelector('img')
-      return img ? img.src : null
-    })
+    const imageUrl = await page.evaluate(`
+  (() => {
+    const img = document.querySelector('img');
+    return img ? img.src : null;
+  })()
+`);
+
 
     let captchaText
 
