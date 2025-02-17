@@ -6,6 +6,32 @@ Permite seleccionar materias basándose en:
 - Código de materia  
 - Nombre o apellido del docente  
 - Código del grupo deseado  
+## 🚀 Instalación y Uso
+
+Sigue estos pasos para configurar y ejecutar el programa:
+
+
+```sh
+# 1. Clona el repositorio  
+git clone https://github.com/Risinget/autosis  
+
+# 2. Accede al directorio del proyecto  
+cd autosis  
+
+# 3. Instala las dependencias  
+npm install  
+
+# 4. Instala Playwright  
+npx playwright install  
+
+# 5. Copia el archivo de configuración y edítalo con tus datos  
+cp resources/data.example.json resources/data.json  
+
+# Luego, abre `resources/data.json` y rellena los campos correspondientes.  
+
+# 6. Inicia el programa  
+npm start
+```
 
 ## ⚠️ Advertencia  
 
