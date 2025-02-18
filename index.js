@@ -190,7 +190,6 @@ async function procesarMateria(materiaDocente) {
   const pathCaptcha = `captchas/${randomName}.png`
 
   const browser = await chromium.launch({
-    executablePath: 'chromium/chrome-win/chrome.exe',
     headless: false
   })
 
